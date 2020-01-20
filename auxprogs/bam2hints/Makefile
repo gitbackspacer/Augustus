@@ -8,8 +8,9 @@
 #	Last modified:  09-October-2015 by Katharina J. Hoff
 
 # Variable definition
-INCLUDES = /usr/include/bamtools
-LIBS = -lbamtools -lz
+INCLUDES = $(BAMTOOLS)/include/bamtools
+LIBS = $(BAMTOOLS)/lib64/libbamtools.a -lz
+
 SOURCES = bam2hints.cc 
 OBJECTS = $(SOURCES:.cc=.o)
 CXXFLAGS += -Wall -O2 # -g -p -g -ggdb 
